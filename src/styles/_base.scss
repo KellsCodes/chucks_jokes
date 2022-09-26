@@ -1,20 +1,234 @@
 /* reset styles */
-// @import "../../public/assets/montserrat/Montserrat-Light.ttf";
-// @font-face {
-//     font-family: montserrat;
-//     src: url(/public/assets/montserrat/Montserrat-Light.ttf) format('trutype');
-// }
 
 * {
     color: inherit;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
-    font-family: montserrat
+    font-family: montserrat-bold
 }
 
 h1 {
-    color: red;
+    color: $white;
+}
+
+.nav {
+    background-color: $dark;
+    height: 60px;
+    width: 100vw;
+    border-bottom: 1px;
+    border-bottom-color: $blue;
+}
+
+input {
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: .9rem;
+}
+
+.btn {
+    height: 35px;
+    width: 150px;
+    border: none;
+    outline: none;
+    color: $white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+._hero {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_btn {
+    border: none;
+    outline: none;
+}
+
+
+
+.hero_section {
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("~/public/assets/images/bitmap.png") no-repeat center center fixed;
+    background-size: cover;
+
+    h1 {
+        height: 60px;
+        font-size: 3rem;
+    }
+
+    p {
+        color: $white;
+        font-family: montserrat-bold;
+        font-size: 1.3rem;
+    }
+
+    .search {
+        height: 35px;
+        width: 300px;
+        border: none;
+        display: flex;
+        flex-direction: center;
+        border-radius: 4px;
+        padding: 2px;
+        background: $white;
+        margin-top: 40px;
+    }
+
+    input {
+        width: 86%;
+    }
+
+    .search_btn {
+        width: 14%;
+        height: 100%;
+        background: url("~/public/assets/icons/search-copy.png") no-repeat center center;
+        background-color: $white;
+
+    }
+}
+
+// category section
+.category_section {
+    width: 80vw;
+    margin: 25px auto;
+
+    .category_select_section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto;
+        gap: 5px;
+    }
+
+    .cat_btn {
+        height: 35px;
+        border: none;
+        outline: none;
+        color: $white;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+
+    .cat_btn_1 {
+        background-color: $red;
+    }
+
+    .cat_btn_2 {
+        background-color: $light-red;
+    }
+
+    .cat_btn_3 {
+        background-color: $orange;
+    }
+
+    .cat_btn_4 {
+        background-color: $yellow;
+    }
+
+    .cat_btn_5 {
+        background-color: $green;
+    }
+
+    .cat_btn_6 {
+        background-color: $light-green;
+    }
+
+    .cat_btn_7 {
+        background-color: $blue;
+    }
+
+    .cat_btn_8 {
+        background-color: $orange;
+    }
+
+    .cat_btn_9 {
+        background-color: $red;
+    }
+
+    .cat_btn_0 {
+        background-color: $white;
+        border: 1px solid $ash;
+        color: $ash;
+
+        .btn_arrow_down {
+            width: 50%;
+            height: 100%;
+            background-color: $red;
+            background: url("~/public/assets/images/path-copy-7.png") no-repeat center center;
+        }
+    }
+
+}
+
+.category_card_section {
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px;
+
+    // card layout
+    .card_layout {
+        // width: 328px;
+        height: 200px;
+        border: 1px solid $white;
+        box-shadow: $ash 0px 0px 2px 0px;
+
+        &:hover {
+            box-shadow: $ash 0px 0px 5px 0px;
+        }
+    }
+}
+
+.category_quote_section {
+    padding: 5px;
+    width: 79%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    border-top: 1px solid $ash;
+    position: relative;
+
+    .joke_category_display {
+        width: auto;
+        height: 25px;
+        padding: 1px 20px;
+        border-radius: 15px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 1px;
+        left: 0;
+        background-color: $light-green;
+        color: $white;
+    }
+
+    p {
+        margin: 20px;
+    }
+
+    .btn {
+        background-color: $light-green;
+        padding: 0 10px;
+        border-radius: 3px;
+    }
 }

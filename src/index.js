@@ -1,4 +1,4 @@
-require("file-loader?name=[name].[ext]!./index.html");
+require("file-loader?name=[name].[ext]!/");
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
