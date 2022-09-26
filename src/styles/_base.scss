@@ -1,0 +1,20 @@
+/* reset styles */
+// @import "../../public/assets/montserrat/Montserrat-Light.ttf";
+// @font-face {
+//     font-family: montserrat;
+//     src: url(/public/assets/montserrat/Montserrat-Light.ttf) format('trutype');
+// }
+
+* {
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: montserrat
+}
+
+h1 {
+    color: red;
+}
