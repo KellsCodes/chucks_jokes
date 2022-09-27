@@ -5,7 +5,7 @@ export default function query(state = {}, action) {
     case QUERY_JOKES_SUCCESS:
       return {
         ...state,
-        query: [...action.payload],
+        query: action.payload,
       };
     case QUERY_JOKES_ERROR:
       return {
