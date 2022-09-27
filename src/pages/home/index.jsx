@@ -11,7 +11,6 @@ export default function Home() {
   const { categories } = useSelector((state) => state.categories);
   const { query } = useSelector((state) => state.query);
   const [queryDisplay, setQueryDisplay] = useState("");
-  console.log(query);
   const [quote, setQuote] = useState("");
   const [category, setCategory] = useState("");
   const [randomQuoteTrigger, setRandomQuoteTrigger] = useState(false);
@@ -28,10 +27,10 @@ export default function Home() {
   };
 
   useEffect(() => {
-    typeof query !== "undefined" &&
-      typeof query !== "string" &&
+    if (typeof query !== "undefined" && typeof query !== "string") {
       setQueryDisplay(query.slice(0, pageNum));
-  }, [query]);
+    }
+  }, [query, pageNum]);
 
   useEffect(() => {
     // fetch random quote from a category, only run when category is selected
@@ -54,7 +53,6 @@ export default function Home() {
         {name}
       </button>
     ));
-    console.log(pageNum)
 
   const quoteCard =
     Array.isArray(queryDisplay) &&
