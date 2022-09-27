@@ -8,7 +8,10 @@ export default function Card({ quote }) {
         <div className="card_header">
           <img src={img} alt="" />
           <h2>
-            {quote?.categories.length ? quote?.categories[0] : "Uncategorized"}
+            {quote?.categories.length
+              ? quote?.categories[0].slice(0, 1).toUpperCase() +
+                quote?.categories[0].slice(1)
+              : "Uncategorized"}
           </h2>
         </div>
         <div className="quote_value">"{quote?.value}"</div>
