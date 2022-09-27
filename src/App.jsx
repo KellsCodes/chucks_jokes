@@ -10,6 +10,7 @@ export default function App() {
   return (
     <Routes>
       <Route path={ROUTES.HOME} element={<Home />} />
+      <Route path={ROUTES.PRODUCTION+"/index.html"} element={<Home />} />
       <Route path={ROUTES.NOT_FOUND} element={<>Page Not found</>} />
     </Routes>
   );

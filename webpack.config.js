@@ -7,7 +7,8 @@ module.exports = {
     filename: "index.bundle.js",
   },
   devServer: {
-    port: 3000,
+    port: process.env.PORT || 3000,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -31,9 +32,9 @@ module.exports = {
         type: "asset/resource",
         use: ["url-loader?limit=6000000"],
         generator: {
-          publickPath: './assets/montserrat',
-          filename: '/assets/montserrat/[name].[ext]'
-        }
+          publickPath: "./assets/montserrat",
+          filename: "/assets/montserrat/[name].[ext]",
+        },
       },
     ],
   },
