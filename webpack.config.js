@@ -1,10 +1,12 @@
 const path = require("path");
 const MiniCssExyractPlugin = require("mini-css-extract-plugin");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "index.bundle.js",
+    publicPath: "/",
   },
   devServer: {
     port: process.env.PORT || 3000,
@@ -38,5 +40,10 @@ module.exports = {
       },
     ],
   },
-  plugins: [new MiniCssExyractPlugin()],
+  plugins: [
+    new MiniCssExyractPlugin(),
+    new HtmlWebpackPlugin({
+      template: "public/index.html",
+    }),
+  ],
 };
